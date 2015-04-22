@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Activity Anim</string>
+    <string name="act_one">One</string>
+    <string name="act_two">Two</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
