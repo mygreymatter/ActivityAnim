@@ -21,8 +21,22 @@ public class ActOne extends ActionBarActivity {
         Intent intent = new Intent(this,ActTwo.class);
         startActivity(intent);
         //push from bottom to top
-//        overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
+        //overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
+        
         //slide from right to left
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        
+        /*
+         * overridePendingTransition(entry,exit)
+         * @entry - animation of the view which enters.
+         * @exit  - animation of the view which exits.  
+         * 
+         * Note: The duration in both animations must be of same duration.
+         * 	     Otherwise, there is mismatch of animations
+         */
+        
+        //In the following transition, ActOne(exit view) stays still during the animation.
+        //During the animation, ActTwo(entry view) moves into the screen from the right.
+        overridePendingTransition(R.anim.slide_in_right,R.anim.standstill);
     }
 }

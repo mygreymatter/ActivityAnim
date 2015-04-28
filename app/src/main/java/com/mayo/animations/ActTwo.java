@@ -20,7 +20,11 @@ public class ActTwo extends ActionBarActivity {
         super.onBackPressed();
 
         finish();
-//        overridePendingTransition(R.anim.push_down_in, R.anim.push_down_out);
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+		//overridePendingTransition(R.anim.push_down_in, R.anim.push_down_out);
+        //overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+        
+        //In the following transition, ActOne(entry view) stays still during the animation.
+        //During the animation, ActTwo(exit view) moves into the screen from the right.
+        overridePendingTransition(R.anim.standstill, R.anim.slide_out_right);
     }
 }
